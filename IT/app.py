@@ -10,7 +10,7 @@ def index():
 def about():
     return render_template('aboutus.html') 
 
-@app.route('/services')
+@app.route('/service')
 def services():
     return render_template('services.html')   
 
