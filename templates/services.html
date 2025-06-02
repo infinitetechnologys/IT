@@ -10,19 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-    * {
-   margin: 0;
+     * {
+      margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Inter', sans-serif;
-}
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fefef9;
-}
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      background-color: #FFFDF6;
+      scroll-behavior: smooth;
+    }
 
-header {
+    body {
+      padding-top: 70px; /* Header height */
+    }
+
+    header {
       width: 100%;
       background-color: #FFFDF6;
       position: fixed;
@@ -30,29 +36,23 @@ header {
       left: 0;
       z-index: 1000;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 10px 40px;
+      padding: 12px 20px;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      animation: slideDown 0.6s ease-out;
-    }
-
-    @keyframes slideDown {
-      from {
-        transform: translateY(-100%);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
+      height: 70px;
     }
 
     .logo img {
-      height: 50px;
+      height: 45px;
     }
 
-    .nav-container nav {
+    .nav-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
       display: flex;
       gap: 24px;
     }
@@ -63,6 +63,7 @@ header {
       font-weight: 500;
       font-size: 16px;
       position: relative;
+      white-space: nowrap;
     }
 
     nav a::after {
@@ -94,6 +95,89 @@ header {
 
     .quote-btn:hover {
       transform: scale(1.05);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #5E9C21;
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background-color: #FFFDF6;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      z-index: 9999;
+      max-height: calc(100vh - 70px);
+      overflow-y: auto;
+    }
+
+    .mobile-nav a {
+      margin: 10px 0;
+      font-size: 16px;
+      text-decoration: none;
+      color: #5E9C21;
+      font-weight: 500;
+    }
+
+    .mobile-nav .quote-btn {
+      margin-top: 10px;
+      width: fit-content;
+    }
+
+    .banner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #e4ffe3;
+    }
+
+    .banner img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrapper,
+      .quote-btn {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .mobile-nav.show {
+        display: flex;
+      }
+
+      .banner img {
+        max-height: 300px;
+      }
     }
 
     .services-section {
@@ -321,131 +405,175 @@ header {
   filter: blur(1px);
 }
 
+/* footer */
 .footer {
-      background-color: #f8f8e3;
-      font-family: 'Segoe UI', sans-serif;
-      color: #000;
-      padding: 60px 20px 0;
+    background-color: #f8f8e3;
+    font-family: 'Segoe UI', sans-serif;
+    color: #000;
+    padding: 60px 20px 0;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+    gap: 40px;
+  }
+
+  .footer-left, .footer-middle, .footer-right {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .footer-left {
+    padding-right: 20px;
+  }
+
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .footer-left p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+  }
+
+  .footer-contact h4 {
+    color: #5E9C21;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .footer-contact p span {
+    margin-right: 8px;
+  }
+
+  .footer-middle {
+    padding-left: 100px;
+    padding-top: 80px;
+  }
+
+  .footer-middle h4 {
+    color: #5E9C21;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+  }
+
+  .footer-middle ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-middle li {
+    margin-bottom: 10px;
+  }
+
+  .footer-middle a {
+    color: #000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .footer-middle a:hover {
+    color: #5E9C21;
+    padding-left: 5px;
+  }
+
+  .footer-right {
+    padding-left: 100px;
+    padding-top: 80px;
+  }
+
+  .footer-map {
+    background-color: #ddd;
+    height: 300px;
+    width: 550hv;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+
+  .footer-socials a {
+    margin: 0 6px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .footer-socials img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .footer-socials a:hover {
+    transform: scale(1.1);
+  }
+
+  .footer-bottom {
+    background-color: #e5e5e5;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+    margin-top: 40px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0 20px;
     }
 
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: auto;
-      gap: 40px;
+    .footer-left, .footer-middle, .footer-right {
+      width: 100%;
+      padding: 0;
+      margin-bottom: 40px;
     }
 
     .footer-middle, .footer-right {
-      flex: 1;
-      min-width: 280px;
-      padding-left: 100px;
-      padding-top: 80px;
-    }
-
-    .footer-left {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .footer-logo {
-      height: 60px;
-      margin-bottom: 20px;
-    }
-
-    .footer-left p {
-      margin-bottom: 12px;
-      line-height: 1.6;
-    }
-
-    .footer-contact h4, .footer-middle h4 {
-      color: #5E9C21;
-      margin-bottom: 15px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-    }
-
-    .footer-contact p span {
-      margin-right: 8px;
-    }
-
-    .footer-middle ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .footer-middle li {
-      margin-bottom: 10px;
-    }
-
-    .footer-middle a {
-      color: #000;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .footer-middle a:hover {
-      color: #5E9C21;
-      padding-left: 5px;
+      padding-top: 0;
     }
 
     .footer-map {
-      background-color: #ddd;
-      height: 300px;
-      width: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #444;
-      font-size: 14px;
-      margin-bottom: 20px;
+      height: 200px;
     }
 
-    .footer-socials a {
-      margin: 0 6px;
-      display: inline-block;
-      transition: transform 0.3s ease;
+    .footer-socials {
+      margin-top: 10px;
     }
 
     .footer-socials img {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
     }
 
-    .footer-socials a:hover {
-      transform: scale(1.1);
+    .footer-contact h4, .footer-middle h4 {
+      font-size: 18px;
+    }
+
+    .footer-middle ul {
+      margin-top: 10px;
+    }
+
+    .footer-left p, .footer-contact p {
+      font-size: 15px;
     }
 
     .footer-bottom {
-      background-color: #e5e5e5;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-      margin-top: 40px;
+      font-size: 13px;
     }
-
-    @media (max-width: 900px) {
-      .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-left, .footer-middle, .footer-right {
-        width: 100%;
-        margin-bottom: 30px;
-      }
-
-      .footer-map {
-        width: 100%;
-      }
-
-      .footer-socials {
-        text-align: left;
-      }
-    }
-
+  }
     </style>
 </head>
 <body>
@@ -453,17 +581,43 @@ header {
     <div class="logo">
       <img src="../static/logo.png" alt="Logo">
     </div>
-    <div class="nav-container">
+
+    <div class="nav-wrapper">
       <nav>
-      <a href="/">Home</a>
-      <a href="/about">About Us</a>
-      <a href="/service">Services</a>
-      <a href="/portfolio">Portfolio</a>
-      <a href="/contact">Contact</a>
-    </nav>
+        <a href="/">Home</a>
+        <a href="/about">About Us</a>
+        <a href="/service">Services</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/contact">Contact</a>
+      </nav>
     </div>
+
     <button class="quote-btn" onclick="window.location.href='/contact';">Get a Quote</button>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+  <div class="mobile-nav" id="mobileNav">
+  <a href="/">Home</a>
+  <a href="/about">About Us</a>
+  <a href="/service">Services</a>
+  <a href="/portfolio">Portfolio</a>
+  <a href="/contact">Contact</a>
+  <button class="quote-btn" onclick="window.location.href='/contact';">Get a Quote</button>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const mobileNav = document.getElementById("mobileNav");
+
+    hamburger.addEventListener("click", function () {
+      mobileNav.classList.toggle("show");
+    });
+  });
+  </script>
 
   <section class="services-section" data-aos="fade-up">
   <div class="container">
@@ -706,48 +860,57 @@ header {
   </div>
 </section>
 
-<footer class="footer">
-    <div class="footer-container">
-      <div class="footer-left">
-        <img src="../static/logo.png" alt="Infinite Technologies Logo" class="footer-logo" />
-        <p>
-          Subscribe to our newsletter to get the latest news, updates, and offers.
-          Building future-ready digital solutions across web, mobile, AI/ML, and immersive technologies.
-        </p>
-        <div class="footer-contact">
-          <h4>Get In Touch</h4>
-          <p><span>📍</span> A/F-43, Amrapali Complex, Bopal Cross Road, near Kotak Mahindra Bank, Ahmedabad-380058</p>
-          <p><span>📧</span> infinitetechnology06@gmail.com</p>
-          <p><span>📞</span> +91 63594 80914</p>
-        </div>
-      </div>
-
-      <div class="footer-middle">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/service">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-right">
-        <div class="footer-map">
-          <p>location of company</p>
-        </div>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/infinite._technologys/profilecard/?igsh=MXJ1cXdlZWtyZGE1aQ=="><img src="https://img.icons8.com/color/32/instagram-new.png" alt="Instagram" /></a>
-          <a href="https://www.facebook.com/share/1BcZkTHeeB/"><img src="https://img.icons8.com/color/32/facebook-new.png" alt="Facebook" /></a>
-          <a href="https://www.linkedin.com/in/infinite-technologys-51aa6a35b"><img src="https://img.icons8.com/color/32/linkedin.png" alt="LinkedIn" /></a>
-        </div>
+<!-- Footer -->
+    <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-left">
+      <img src="../static/logo.png" alt="Infinite Technologies Logo" class="footer-logo" />
+      <p>
+        Subscribe to our newsletter to get the latest news, updates, and offers.
+        Building future-ready digital solutions across web, mobile, AI/ML, and immersive technologies.
+      </p>
+      <div class="footer-contact">
+        <h4>Get In Touch</h4>
+        <p><span>📍</span> A/F-43, Amrapali Complex, Bopal Cross Road, near Kotak Mahindra Bank, Ahmedabad-380058</p>
+        <p><span>📧</span> infinitetechnology06@gmail.com</p>
+        <p><span>📞</span> +91 63594 80914</p>
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 Infinite Technology. All rights reserved. Designed with ❤️ by Infinite Design Team</p>
+    <div class="footer-middle">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/service">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
     </div>
-  </footer>
+
+    <div class="footer-right">
+      <div class="footer-map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1185.703343358304!2d72.47736876964375!3d23.029076698698045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e9b74cabb1239%3A0x44e1a9def379c24e!2sAmrapali%20Shopping%20Centre!5e1!3m2!1sen!2sin!4v1748858234962!5m2!1sen!2sin" 
+          width="100%" 
+          height="230" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/infinite._technologys/profilecard/?igsh=MXJ1cXdlZWtyZGE1aQ=="><img src="https://img.icons8.com/color/32/instagram-new.png" alt="Instagram" /></a>
+        <a href="https://www.facebook.com/share/1BcZkTHeeB/"><img src="https://img.icons8.com/color/32/facebook-new.png" alt="Facebook" /></a>
+        <a href="https://www.linkedin.com/in/infinite-technologys-51aa6a35b"><img src="https://img.icons8.com/color/32/linkedin.png" alt="LinkedIn" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Infinite Technology. All rights reserved. Designed with ❤️ by Infinite Design Team</p>
+  </div>
+</footer>
 
   <!-- AOS JS  -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
