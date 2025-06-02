@@ -11,8 +11,7 @@
   <link rel="icon" type="image/png" href="../static/only logo.svg" />
   <!--  ======  Page Styles  ====== -->
   <style>
-    /* ----------  Base  ---------- */
-     /* Base Styles */
+/* === Reset & Base === */
 * {
   margin: 0;
   padding: 0;
@@ -31,9 +30,10 @@ body {
   padding-top: 70px;
 }
 
-/* Header */
+/* === Header === */
 header {
   width: 100%;
+  height: 70px;
   background-color: #FFFDF6;
   position: fixed;
   top: 0;
@@ -43,7 +43,6 @@ header {
   align-items: center;
   padding: 12px 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  height: 70px;
 }
 
 .logo img {
@@ -130,7 +129,7 @@ nav a:hover::after {
   left: 0;
   width: 100%;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   z-index: 9999;
   max-height: calc(100vh - 70px);
   overflow-y: auto;
@@ -149,6 +148,7 @@ nav a:hover::after {
   width: fit-content;
 }
 
+/* === Banner === */
 .banner {
   width: 100%;
   display: flex;
@@ -164,14 +164,19 @@ nav a:hover::after {
   display: block;
 }
 
-/* Layout */
-main { padding-top: 90px; }
+/* === Section Layout === */
+main {
+  padding-top: 90px;
+}
+
 .section {
-  padding: 0px 20px;
+  padding: 0 20px;
   overflow: hidden;
   position: relative;
 }
-.section-content {
+
+.section-content,
+.project-content {
   max-width: 1200px;
   margin-inline: auto;
   display: flex;
@@ -180,9 +185,16 @@ main { padding-top: 90px; }
   justify-content: space-between;
 }
 
-/* Portfolio */
-.portfolio-section { background: #FFFDF6; }
-.portfolio-text { flex: 1 1 500px; padding: 20px; }
+/* === Portfolio Section === */
+.portfolio-section {
+  background: #FFFDF6;
+}
+
+.portfolio-text {
+  flex: 1 1 500px;
+  padding: 20px;
+}
+
 .portfolio-title {
   color: #5E9C21;
   font-size: 28px;
@@ -190,15 +202,31 @@ main { padding-top: 90px; }
   letter-spacing: 1px;
   margin-bottom: 20px;
 }
+
 .portfolio-description {
   color: #000;
   font-size: 18px;
   line-height: 1.7;
   max-width: 600px;
 }
-.portfolio-image { flex: 1 1 400px; padding: 20px; text-align: center; }
-.portfolio-img { width: 100%; max-width: 380px; height: auto; }
-.portfolio-cta { text-align: center; margin-top: 60px; }
+
+.portfolio-image {
+  flex: 1 1 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.portfolio-cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
 .cta-btn {
   background: #F4A533;
   color: #000;
@@ -209,52 +237,54 @@ main { padding-top: 90px; }
   letter-spacing: 0.5px;
   transition: transform 0.25s;
 }
+
 .cta-btn:hover {
   transform: translateY(-2px) scale(1.03);
 }
 
-/* Project */
+/* === Project Section === */
 .project-section {
   background-color: #F3F3E0;
   padding: 100px 20px;
   font-family: 'Inter', sans-serif;
 }
-.project-section.light-bg { background-color: #FFFDF6; }
-.project-content {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+
+.project-section.light-bg {
+  background-color: #FFFDF6;
 }
+
 .project-text, .project-video {
   flex: 1 1 500px;
   padding: 20px;
 }
+
 .project-title {
   color: #5E9C21;
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 20px;
 }
+
 .project-description {
   color: #000;
   font-size: 18px;
   line-height: 1.7;
 }
+
 .tools-heading {
   margin-top: 24px;
   color: #5E9C21;
   font-size: 18px;
   font-weight: 600;
 }
+
 .project-tools {
   font-size: 16px;
   color: #000;
   letter-spacing: 0.5px;
   margin-top: 8px;
 }
+
 .project-video iframe {
   width: 100%;
   height: 300px;
@@ -263,13 +293,14 @@ main { padding-top: 90px; }
   border: none;
 }
 
-/* Footer */
+/* === Footer === */
 .footer {
   background-color: #f8f8e3;
   font-family: 'Segoe UI', sans-serif;
   color: #000;
   padding: 60px 20px 0;
 }
+
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -278,86 +309,95 @@ main { padding-top: 90px; }
   margin: auto;
   gap: 40px;
 }
-.footer-left, .footer-middle, .footer-right {
+
+.footer-left,
+.footer-middle,
+.footer-right {
   flex: 1;
   min-width: 280px;
 }
-.footer-left {
-  padding-right: 20px;
-}
+
 .footer-logo {
   height: 60px;
   margin-bottom: 20px;
 }
+
 .footer-left p {
   margin-bottom: 12px;
   line-height: 1.6;
 }
-.footer-contact h4 {
+
+.footer-contact h4,
+.footer-middle h4 {
   color: #5E9C21;
-  margin-top: 30px;
   margin-bottom: 12px;
   font-weight: 500;
   letter-spacing: 1px;
 }
+
 .footer-contact p span {
   margin-right: 8px;
 }
+
 .footer-middle {
   padding-left: 100px;
   padding-top: 80px;
 }
-.footer-middle h4 {
-  color: #5E9C21;
-  margin-bottom: 15px;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-}
+
 .footer-middle ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin-top: 10px;
 }
+
 .footer-middle li {
   margin-bottom: 10px;
 }
+
 .footer-middle a {
   color: #000;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .footer-middle a:hover {
   color: #5E9C21;
   padding-left: 5px;
 }
+
 .footer-right {
   padding-left: 100px;
   padding-top: 80px;
 }
+
 .footer-map {
   background-color: #ddd;
   height: 230px;
   width: 100%;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #444;
   font-size: 14px;
   margin-bottom: 20px;
-  border-radius: 8px;
 }
+
 .footer-socials a {
   margin: 0 6px;
   display: inline-block;
   transition: transform 0.3s ease;
 }
+
 .footer-socials img {
   width: 28px;
   height: 28px;
 }
+
 .footer-socials a:hover {
   transform: scale(1.1);
 }
+
 .footer-bottom {
   background-color: #e5e5e5;
   text-align: center;
@@ -366,16 +406,47 @@ main { padding-top: 90px; }
   margin-top: 40px;
 }
 
-/* Responsive */
+/* === Responsive === */
 @media (max-width: 768px) {
-  .nav-wrapper, .quote-btn { display: none; }
-  .hamburger { display: flex; margin-left: auto; }
-  .mobile-nav.show { display: flex; }
-  .banner img { max-height: 300px; }
-  .section-content, .project-content { flex-direction: column; text-align: center; }
-  .portfolio-text, .portfolio-image, .project-text, .project-video {
+  .nav-wrapper,
+  .quote-btn {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+
+  .banner img {
+    max-height: 300px;
+  }
+
+  .section-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-content.reverse-on-mobile {
+    flex-direction: column-reverse;
+  }
+
+  .portfolio-text,
+  .portfolio-image,
+  .project-text,
+  .project-video {
     flex: 1 1 100%;
   }
+
   .project-video iframe {
     height: 200px;
   }
@@ -387,37 +458,40 @@ main { padding-top: 90px; }
     align-items: flex-start;
     padding: 0 20px;
   }
-  .footer-left, .footer-middle, .footer-right {
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
     width: 100%;
     padding: 0;
     margin-bottom: 40px;
   }
-  .footer-middle, .footer-right {
-    padding-top: 0;
-  }
+
   .footer-map {
     height: 200px;
   }
-  .footer-socials {
-    margin-top: 10px;
-  }
+
   .footer-socials img {
     width: 24px;
     height: 24px;
   }
-  .footer-contact h4, .footer-middle h4 {
+
+  .footer-contact h4,
+  .footer-middle h4 {
     font-size: 18px;
   }
-  .footer-middle ul {
-    margin-top: 10px;
-  }
-  .footer-left p, .footer-contact p {
+
+  .footer-left p,
+  .footer-contact p {
     font-size: 15px;
   }
+
   .footer-bottom {
     font-size: 13px;
   }
 }
+
+
   </style>
 </head>
 
@@ -521,7 +595,7 @@ main { padding-top: 90px; }
 
     <!-- =========  E-COMMERCE PLATFORM SECTION  ========= -->
 <section class="project-section project-alt" data-aos="fade-up">
-  <div class="project-content">
+  <div class="project-content reverse-on-mobile">
     <!-- video on the LEFT -->
     <div class="project-video" data-aos="fade-right">
       <!-- Replace the YouTube URL with your own -->
@@ -579,7 +653,7 @@ main { padding-top: 90px; }
 
 <!-- =========  Inventory Management System SECTION  ========= -->
 <section class="project-section light-bg" data-aos="fade-up">
-  <div class="project-content">
+  <div class="project-content reverse-on-mobile">
     <!-- Left: Video -->
     <div class="project-video" data-aos="fade-right">
       <iframe
