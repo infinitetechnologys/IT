@@ -34,7 +34,7 @@ def portfolio():
 
 @app.route('/sitemap.xml')
 def sitemap():
-    return send_from_directory('static', 'sitemap.xml')
+    return send_from_directory('static', 'site.xml')
 
 @app.route('/robots.txt')
 def robots():
