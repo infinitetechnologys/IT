@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infinite Technology | Home</title>
+  <link rel="icon" type="image/png" href="../static/WhatsApp Image 2025-06-09 at 10.21.06_8fb00f14.jpg" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Infinite Technology",
+    "url": "https://infinitetechnologys.com/",
+    "logo": "https://infinitetechnologys.com/assets/logo.png",
+    "description": "Infinite Technology is an IT services company based in Ahmedabad providing web development, app solutions, and tech consulting around the world.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "A/F-43, Amrapali Complex, Bopal Cross Road, near Kotak Mahindra Bank",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "postalCode": "380015",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-6359480914",
+      "contactType": "Customer Service",
+      "areaServed": "IN",
+      "availableLanguage": "English, Gujarati, Hindi"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1BcZkTHeeB/",
+      "https://www.instagram.com/infinite._technologys/profilecard/?igsh=MXJ1cXdlZWtyZGE1aQ==",
+      "https://www.linkedin.com/in/infinite-technologys-51aa6a35b",
+      "https://infinitetechnologys.com/"
+    ]
+  }
+  </script>
+<meta name="description" content="Infinite Technology is a top IT company in Ahmedabad offering web development, mobile app development, AI solutions, and digital transformation services.">
+<meta name="keywords" content="IT Services Ahmedabad, Web Development Ahmedabad, App Development, Software Company in Ahmedabad, AI Solutions Gujarat">
+<meta property="og:title" content="Infinite Technology | Top IT Company in Ahmedabad">
+<meta property="og:description" content="Offering leading-edge IT services in Ahmedabad including web and mobile development, software solutions, and cloud integrations.">
+<meta property="og:url" content="https://infinitetechnologys.com/">
+<meta property="og:image" content="https://infinitetechnologys.com/assets/og-home.jpg">
+
+<meta name="twitter:title" content="Infinite Technology | Top IT Services Ahmedabad">
+<meta name="twitter:description" content="Offering full-stack IT services in Ahmedabad including websites, apps, and AI-driven software.">
+<meta name="twitter:image" content="https://infinitetechnologys.com/assets/og-home.jpg">
+<link rel="canonical" href="https://infinitetechnologys.com/" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: #212529;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      background-color:rgb(255, 255, 255);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      height: 70px;
+    }
+
+    .logo img {
+      height: 45px;
+    }
+
+    .nav-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ba06ec;
+      font-weight: 500;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      height: 2px;
+      background: #000000;
+      width: 0;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .quote-btn {
+      background-color: #800080d3;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ba06ec;
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: auto;
+      padding: 8px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 999;
+      flex-direction: column;
+      padding: 20px;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-nav.active {
+      transform: translateY(0);
+    }
+
+    .mobile-nav a {
+      padding: 12px 0;
+      color: #ba06ec;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .bubble-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(186, 0, 255, 0.15);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
+    .mouse-bubble {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(144, 0, 255, 0.25);
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s, background-color 0.5s;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #000;
+    }
+
+    main {
+      position: relative;
+      z-index: 2;
+      padding-top: 90px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-inline: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .content h1 {
+      font-size: 2.75rem;
+      color: #b50dfdbd;
+      margin-top: 0;
+    }
+
+    .content p {
+      font-size: 1.125rem;
+      color: black;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.75rem 2rem;
+      background-color: #800080d3;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0.375rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    }
+
+model-viewer {
+  width: 100%;
+  max-width: 600px;
+  height: 480px;
+  background: white;
+  border-radius: 12px; /* optional: smooth corners */
+  box-shadow: 0 8px 30px rgba(146, 19, 146, 0.452); /* light pink shadow */
+}
+
+    #ai-character {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 100px 5% 120px;
+      gap: 3rem;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    #ai-character .model-container {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+    }
+
+    #ai-character model-viewer {
+      width: 100%;
+      height: 500px;
+      animation: bobble 3s ease-in-out infinite;
+    }
+
+    @keyframes bobble {
+      0%, 100% { transform: rotateZ(-1deg) translateY(0px); }
+      50% { transform: rotateZ(1deg) translateY(-6px); }
+    }
+
+    #ai-character .speech-bubble {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.95);
+      padding: 12px 18px;
+      border-radius: 15px;
+      font-size: 15px;
+      color: #333;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      max-width: 220px;
+      text-align: center;
+      animation: fadeInOut 6s ease-in-out infinite;
+    }
+
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; transform: translate(-50%, -10px); }
+      10%, 90% { opacity: 1; transform: translate(-50%, -20px); }
+    }
+
+    #ai-character .ai-text {
+      flex: 1;
+      position: relative;
+      min-width: 0;
+    }
+
+    #ai-character .ai-text h2 {
+      font-size: 2rem;
+      color: #b100d1;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    #ai-character .ai-text p {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 0;
+    }
+
+    #ai-character .bubble-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    #ai-character .bubble-bg .bubble {
+      background: rgba(0, 204, 255, 0.15);
+    }
+
+    footer {
+      background: #f1f3f5;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.875rem;
+      color: #868e96;
+      border-top: 1px solid #dee2e6;
+    }
+
+    /* ----------- NEW VISION SECTION ----------- */
+    #vision-section {
+      position: relative;
+      padding: 120px 5%;
+      text-align: center;
+      color: #fff;
+      overflow: hidden;
+      background: white;
+      z-index: 1;
+    }
+
+    .vision-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .vision-content h2 {
+      font-size: 2.5rem;
+      color: #b50dfdbd;
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    .vision-content p {
+      font-size: 1.2rem;
+      color: black;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .vision-3d-effects {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .cube {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(145deg, #00eaff, #6f00ff);
+      opacity: 0.12;
+      border-radius: 8px;
+      transform: rotate3d(1, 1, 1, 45deg);
+      animation: float3d 12s linear infinite;
+    }
+
+    .cube1 { top: 10%; left: 15%; animation-delay: 0s; }
+    .cube2 { top: 40%; left: 70%; animation-delay: 3s; }
+    .cube3 { top: 70%; left: 30%; animation-delay: 6s; }
+    .cube4 { top: 20%; left: 80%; animation-delay: 9s; }
+    .cube5 { top: 60%; left: 10%; animation-delay: 12s; }
+
+    @keyframes float3d {
+      0% { transform: translateY(0) rotate3d(1, 1, 1, 0deg); opacity: 0.15; }
+      50% { transform: translateY(-30px) rotate3d(1, 1, 1, 180deg); opacity: 0.35; }
+      100% { transform: translateY(0px) rotate3d(1, 1, 1, 360deg); opacity: 0.15; }
+    }
+
+    .glow-ring {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border: 2px solid rgba(0, 134, 134, 0.648);
+      border-radius: 50%;
+      animation: pulseGlow 4s infinite ease-in-out;
+    }
+
+    .glow-ring.r1 { top: 10%; left: 70%; }
+    .glow-ring.r2 { bottom: 20%; right: 20%; }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.1; }
+      50% { transform: scale(1.2); opacity: 0.4; }
+    }
+
+    .dots-bg {
+      background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+      background-size: 30px 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.04;
+    }
+
+    .line-swipe {
+      position: absolute;
+      width: 120%;
+      height: 2px;
+      background: linear-gradient(to right, transparent, #00eaff, transparent);
+      animation: swipeLine 6s infinite;
+    }
+
+    .line-swipe:nth-child(1) { top: 30%; animation-delay: 0s; }
+    .line-swipe:nth-child(2) { top: 60%; animation-delay: 2s; }
+
+    @keyframes swipeLine {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    /* ----------- NEW 3D SHOWCASE SECTION ----------- */
+    #showcase-section {
+      position: relative;
+      padding: 100px 5%;
+      background: white;
+      overflow: hidden;
+    }
+
+    .showcase-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .showcase-container h2 {
+      font-size: 2.5rem;
+      color: #b100d1;
+      margin-bottom: 2rem;
+      margin-top: 0;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .model-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: white;
+    }
+
+    .model-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .model-card model-viewer {
+      width: 100%;
+      height: 300px;
+      background: transparent;
+    }
+
+    .model-info {
+      padding: 1.5rem;
+      text-align: left;
+    }
+
+    .model-info h3 {
+      font-size: 1.25rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+    }
+
+    .model-info p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .floating-icons {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      animation: iconFloat 8s ease-in-out infinite;
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+
+    .icon1 { top: 10%; left: 5%; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'); }
+    .icon2 { top: 5%; left: 95%; animation-delay: 1s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'); }
+    .icon3 { top: 90%; left: 90%; animation-delay: 2s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'); }
+    .icon4 { top: 50%; left: 10%; animation-delay: 3s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg'); }
+    .icon5 { top: 83%; left: 7%; animation-delay: 4s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg'); }
+    .icon6 { top: 10%; left: 70%; animation-delay: 5s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg'); }
+    .icon7 { top: 55%; left: 90%; animation-delay: 6s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg'); }
+    .icon8 { top: 96%; left: 41%; animation-delay: 7s; background-image: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg'); }
+
+    /* ----------- RESPONSIVE MEDIA QUERIES ----------- */
+    @media (max-width: 1100px) {
+      main {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+
+      .content {
+        order: -1;
+      }
+
+      model-viewer {
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 900px) {
+      #ai-character {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 5% 100px;
+      }
+
+      #ai-character model-viewer {
+        height: 360px;
+        margin-bottom: 30px;
+      }
+
+      .content h1 {
+        font-size: 2.25rem;
+      }
+
+      #ai-character .speech-bubble {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .vision-content h2 {
+        font-size: 2rem;
+      }
+
+      .vision-content p {
+        font-size: 1rem;
+      }
+
+      .showcase-container h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrapper {
+        display: none;
+      }
+
+      .quote-btn {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .mobile-nav {
+        display: flex;
+      }
+
+      main {
+        padding-top: 70px;
+      }
+
+      .content h1 {
+        font-size: 2rem;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      model-viewer {
+        height: 350px;
+      }
+
+      #ai-character model-viewer {
+        height: 300px;
+      }
+
+      #ai-character .ai-text h2 {
+        font-size: 1.75rem;
+      }
+
+      #ai-character .ai-text p {
+        font-size: 1rem;
+      }
+
+      .vision-content h2 {
+        font-size: 1.75rem;
+      }
+
+      .vision-content p {
+        font-size: 0.95rem;
+      }
+
+      .model-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .model-card model-viewer {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content h1 {
+        font-size: 1.75rem;
+      }
+
+      .btn-primary {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+      }
+
+      model-viewer {
+        height: 280px;
+      }
+
+      #ai-character {
+        padding: 60px 5% 80px;
+      }
+
+      #ai-character model-viewer {
+        height: 250px;
+      }
+
+      #ai-character .ai-text h2 {
+        font-size: 1.5rem;
+      }
+
+      #vision-section {
+        padding: 80px 5%;
+      }
+
+      #showcase-section {
+        padding: 60px 5%;
+      }
+
+      .showcase-container h2 {
+        font-size: 1.75rem;
+      }
+
+      .model-info {
+        padding: 1rem;
+      }
+
+      .model-info h3 {
+        font-size: 1.1rem;
+      }
+
+      .model-info p {
+        font-size: 0.9rem;
+      }
+    }
+  .fancy-footer {
+  background: #fff;
+  color: #333;
+  padding: 60px 20px 30px;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
+}
+
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('https://www.transparenttextures.com/patterns/bubbles.png');
+  opacity: 0.03;
+  z-index: 0;
+  animation: scrollBackground 120s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Align vertically */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  text-align: center; /* Center text for consistency */
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #b100d1;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+  color: #b100d1;
+  text-shadow: 0 0 5px #b100d1;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background: #b100d1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.subscribe-form button:hover {
+  background: #d135f5;
+  box-shadow: 0 0 10px #d135f5;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  padding-left: 35%;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(33%) sepia(89%) saturate(7421%) hue-rotate(281deg) brightness(94%) contrast(101%);
+  opacity: 0.7;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.map-section {
+  margin-top: 40px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(236, 40, 236, 0.575); /* light pink shadow */
+}
+
+.map-frame {
+  width: 100%;
+  height: 400px;
+  border: none;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.map-wrapper:hover .map-frame {
+  transform: scale(1.1);
+}
+
+.map-hover-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #000;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.map-wrapper:hover .map-hover-text {
+  display: block;
+}
+
+.map-hover-text a {
+  color: #b100d1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.map-hover-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo"><img src="../static/logo.png" alt="Logo" /></div>
+  <div class="nav-wrapper">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/services">Services</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+  <button class="quote-btn" onclick="location.href='/contact'">Get a Quote</button>
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/services">Services</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="quote-btn" style="display: inline-block; margin-top: 15px; width: auto;">Get a Quote</a>
+  </div>
+</header>
+
+<div class="bubble-bg" id="bubbleContainer"></div>
+<div class="mouse-bubble" id="mouseBubble"></div>
+
+<main>
+  <div class="content">
+    <h1>Empowering Your Digital Future</h1>
+    <p>We deliver cutting-edge IT solutions tailored to your business needs.</p>
+  </div>
+  <model-viewer
+    src="../static/gaming_setup.glb"
+    alt="Gaming Setup"
+    auto-rotate
+    camera-controls
+    disable-zoom
+    environment-image="neutral"
+    exposure="1">
+  </model-viewer>
+</main>
+
+<section id="ai-character">
+  <div class="bubble-bg" id="aiBubbleContainer"></div>
+  <div class="model-container">
+    <model-viewer
+      src="../static/model.glb"
+      alt="AI Girl Walking"
+      autoplay
+      camera-controls
+      auto-rotate
+      disable-zoom
+      shadow-intensity="1"
+      ar
+      animation-name="Walk">
+    </model-viewer>
+    <div class="speech-bubble" id="aiBubble">🤔 Thinking about the future of tech...</div>
+  </div>
+  <div class="ai-text">
+    <h2>About Infinite Technology</h2>
+    <p>
+      At Infinite Technology, we blend creativity with cutting-edge tech to deliver powerful digital experiences. Whether you're a startup seeking MVP development or an enterprise exploring AI transformation, we have the expertise to bring your vision to life. We don’t just build apps—we build solutions that grow with you.
+    </p>
+  </div>
+</section>
+
+<section id="vision-section">
+  <div class="vision-3d-effects">
+    <div class="cube cube1"></div>
+    <div class="cube cube2"></div>
+    <div class="cube cube3"></div>
+    <div class="cube cube4"></div>
+    <div class="cube cube5"></div>
+    <div class="glow-ring r1"></div>
+    <div class="glow-ring r2"></div>
+    <div class="dots-bg"></div>
+    <div class="line-swipe"></div>
+    <div class="line-swipe"></div>
+  </div>
+  <div class="vision-content">
+    <h2>Our Vision for the Future</h2>
+    <p>
+      At Infinite Technology, we envision a world enhanced by AI, where businesses thrive through automation, smart interfaces, and immersive experiences.
+      Our team blends creativity with innovation to bring your digital dreams to life.
+    </p>
+  </div>
+</section>
+
+<section id="showcase-section">
+    <div class="floating-icons icon1"></div>
+    <div class="floating-icons icon2"></div>
+    <div class="floating-icons icon3"></div>
+    <div class="floating-icons icon4"></div>
+    <div class="floating-icons icon5"></div>
+    <div class="floating-icons icon6"></div>
+    <div class="floating-icons icon7"></div>
+    <div class="floating-icons icon8"></div>
+    <div class="showcase-container">
+      <h2>Our Expertise</h2>
+      <div class="model-grid">
+        <div class="model-card">
+          <model-viewer src="../static/html_logo_3d_model.glb" auto-rotate camera-controls disable-zoom></model-viewer>
+          <div class="model-info">
+            <h3>HTML & CSS</h3>
+            <p>Creating modern and responsive web layouts using the latest HTML5 and CSS3 standards, ensuring cross-browser compatibility.</p>
+          </div>
+        </div>
+        <div class="model-card">
+          <model-viewer src="../static/python.glb" auto-rotate camera-controls disable-zoom></model-viewer>
+          <div class="model-info">
+            <h3>Python</h3>
+            <p>Implementing versatile server-side applications with Python, leveraging its rich ecosystem for various backend tasks.</p>
+          </div>
+        </div>
+        <div class="model-card">
+          <model-viewer src="../static/flutter.glb" auto-rotate camera-controls disable-zoom></model-viewer>
+          <div class="model-info">
+            <h3>Flutter</h3>
+            <p>Developing visually appealing, cross-platform mobile applications with Flutter, ensuring smooth performance on both iOS and Android.</p>
+          </div>
+        </div>
+        <div class="model-card">
+          <model-viewer src="../static/java.glb" auto-rotate camera-controls disable-zoom></model-viewer>
+          <div class="model-info">
+            <h3>Java</h3>
+            <p>Building robust and scalable backend applications using modern Java frameworks like Spring Boot, ensuring high performance, security, and maintainability.</p>
+          </div>
+        </div>
+        <div class="model-card">
+          <model-viewer src="../static/Figma_Logo_0611062457_texture.glb" auto-rotate camera-controls disable zoom></model-viewer>
+          <div class="model-info">
+            <h3>Figma</h3>
+            <p>Creating collaborative and responsive design prototypes with Figma, offering real-time design feedback and easy collaboration.</p>
+          </div>
+        </div>
+        <div class="model-card">
+          <model-viewer src="../static/Firebase_Logo_0611063747_texture.glb" auto-rotate camera-controls disable zoom></model-viewer>
+          <div class="model-info">
+            <h3>Firebase</h3>
+            <p>Integrating Firebase for real-time database solutions, offering seamless synchronization and scalability for mobile and web apps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer class="fancy-footer">
+  <div class="animated-bg"></div>
+  <div class="footer-container">
+    <div class="footer-col newsletter">
+      <h3>Infinite Technology</h3>
+      <p>Subscribe to our newsletter to get the latest news, updates, and offers. Building future-ready digital solutions across web, mobile, AI/ML, and immersive technologies.</p>
+    </div>
+
+    <div class="footer-col contact">
+      <h3>Get In Touch</h3>
+      <p>📍 A/F-43, Amrapali Complex,<br> Bopal Cross Road, near Kotak Mahindra Bank,<br> Ahmedabad-380058</p>
+      <p>📧 <a href="mailto:infinitetechnology06@gmail.com">infinitetechnology06@gmail.com</a></p>
+      <p>📞 <a href="tel:+916359480914">+91 63594 80914</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1BcZkTHeeB/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/in/infinite-technologys-51aa6a35b" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/infinite._technologys/profilecard/?igsh=MXJ1cXdlZWtyZGE1aQ==" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-col links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <li><a href="/portfolio">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="map-section">
+  <div class="map-wrapper">
+    <iframe
+      class="map-frame"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d592.8527079149901!2d72.4777631!3d23.0288411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc9aeacd773d8d31%3A0x9229a7c405cb5b3e!2sInfinite%20Technology!5e1!3m2!1sen!2sin!4v1749802125810!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div class="map-hover-text">
+      <a href="https://www.google.com/maps?q=Infinite+Technology" target="_blank">
+        📍 Explore our Location on Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Infinite Technologys. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Toggle mobile nav
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+    mobileMenuBtn.innerHTML = mobileNav.classList.contains('active')
+      ? '<i class="fas fa-times"></i>'
+      : '<i class="fas fa-bars"></i>';
+  });
+
+  // Close nav on link click
+  const mobileLinks = mobileNav.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('active');
+      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+  });
+
+  // Scroll change color for AI section
+  const aiSection = document.getElementById("ai-character");
+  window.addEventListener("scroll", () => {
+    if (!aiSection) return;
+    const aiTop = aiSection.offsetTop;
+    const aiHeight = aiSection.offsetHeight;
+    const scrollY = window.scrollY + window.innerHeight / 2;
+    mouseBubble.style.backgroundColor =
+      scrollY >= aiTop && scrollY < aiTop + aiHeight
+        ? "rgba(0, 204, 255, 0.25)"
+        : "rgba(144, 0, 255, 0.25)";
+  });
+
+  // Floating message for AI bubble
+  const aiBubble = document.getElementById("aiBubble");
+  const messages = [
+    "🤔 Thinking about the future of tech...",
+    "💬 Need a custom CRM or AI chatbot?",
+    "🌐 We build websites & apps tailored for you!",
+    "📈 Automate your business with AI today!"
+  ];
+  let i = 0;
+  setInterval(() => {
+    aiBubble.textContent = messages[i];
+    i = (i + 1) % messages.length;
+  }, 6000);
+
+  // Generate bubbles with color
+  function generateBubbles(section, count, color) {
+    const container = document.createElement("div");
+    container.className = "bubble-container";
+    container.style.position = "absolute";
+    container.style.top = "0";
+    container.style.left = "0";
+    container.style.width = "100%";
+    container.style.height = "100%";
+    container.style.zIndex = "-1";
+    container.style.pointerEvents = "none";
+    section.style.position = "relative";
+    section.appendChild(container);
+
+    for (let i = 0; i < count; i++) {
+      const bubble = document.createElement("div");
+      bubble.className = "bubble";
+      const size = Math.random() * 20 + 10;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      bubble.style.animationDelay = `${Math.random() * 5}s`;
+      bubble.style.backgroundColor = color;
+      container.appendChild(bubble);
+    }
+  }
+
+  // Select sections
+  const bannerSection = document.getElementById("banner");
+  if (bannerSection) {
+    generateBubbles(bannerSection, 25, "rgba(0, 153, 255, 0.25)"); // Blue
+  }
+
+  const allSections = document.querySelectorAll("section, .bubble-section");
+  allSections.forEach(section => {
+    if (section !== bannerSection) {
+      generateBubbles(section, 20, "rgba(255, 0, 144, 0.2)"); // Pink
+    }
+  });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infinite Technology | Services</title>
+    <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service Like web development, Web design, App development, UI/UX design, Product, Product development, Product design, CRM model, Digital Marketing, SEO Expert, LMS Expert, Graphic Developing, Photo Edit, Property buy, sell, rent, Land buy-sell-rent, Commercial buy-sell-rent",
+    "name": "Infinite Technology",
+    "url": "https://infinitetechnologys.com/",
+    "logo": "https://infinitetechnologys.com/assets/logo.png",
+    "description": "Infinite Technology is an IT services company based in Ahmedabad providing web development, app solutions, and tech consulting around the world.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "A/F-43, Amrapali Complex, Bopal Cross Road, near Kotak Mahindra Bank",
+      "addressLocality": "Ahmedabad",
+      "addressRegion": "Gujarat",
+      "postalCode": "380015",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-6359480914",
+      "contactType": "Customer Service",
+      "areaServed": "IN",
+      "availableLanguage": "English, Gujarati, Hindi"
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1BcZkTHeeB/",
+      "https://www.instagram.com/infinite._technologys/profilecard/?igsh=MXJ1cXdlZWtyZGE1aQ==",
+      "https://www.linkedin.com/in/infinite-technologys-51aa6a35b",
+      "https://infinitetechnologys.com/"
+    ]
+  }
+  </script>
+<meta name="description" content="Explore our full suite of IT services in Ahmedabad including software development, web design, cloud solutions, AI integration, and tech consulting.">
+<meta name="keywords" content="IT Services Ahmedabad, Software Development, Web Design Ahmedabad, AI Integration, Cloud Services, Tech Consulting Ahmedabad">
+<meta property="og:title" content="IT Services in Ahmedabad | Infinite Technology">
+<meta property="og:description" content="Top-rated IT services company in Ahmedabad offering complete tech solutions to businesses of all sizes.">
+<meta property="og:url" content="https://infinitetechnologys.com/services.html">
+<meta property="og:image" content="https://infinitetechnologys.com/assets/og-services.jpg">
+
+<meta name="twitter:title" content="Infinite Technology - IT Services in Ahmedabad">
+<meta name="twitter:description" content="Software, web, cloud & AI development services under one roof in Gujarat.">
+<meta name="twitter:image" content="https://infinitetechnologys.com/assets/og-services.jpg">
+  <link rel="icon" type="image/png" href="../static/WhatsApp Image 2025-06-09 at 10.21.06_8fb00f14.jpg" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Animation & Particles -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.0/tsparticles.bundle.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: #212529;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      background-color:rgb(255, 255, 255);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      height: 70px;
+    }
+
+    .logo img {
+      height: 45px;
+    }
+
+    .nav-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ba06ec;
+      font-weight: 500;
+      font-size: 16px;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      height: 2px;
+      background: #000000;
+      width: 0;
+      transition: width 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .quote-btn {
+      background-color: #800080d3;
+      color: white;
+      padding: 8px 20px;
+      border-radius: 20px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #ba06ec;
+      font-size: 24px;
+      cursor: pointer;
+      margin-left: auto;
+      padding: 8px;
+    }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 999;
+      flex-direction: column;
+      padding: 20px;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+
+    .mobile-nav.active {
+      transform: translateY(0);
+    }
+
+    .mobile-nav a {
+      padding: 12px 0;
+      color: #ba06ec;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #eee;
+    }
+
+    .mobile-nav a:last-child {
+      border-bottom: none;
+    }
+
+    .bubble-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(186, 0, 255, 0.15);
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh); opacity: 0; }
+    }
+
+    .mouse-bubble {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(144, 0, 255, 0.25);
+      pointer-events: none;
+      z-index: 10000;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s, background-color 0.5s;
+    }
+
+    #tsparticles {
+      position: absolute;
+      width: 100%;
+      height: 80vh;
+      z-index: 0;
+    }
+
+    .scene-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 5vw;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      gap: 40px;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+
+    .services-text {
+      line-height: 140%;
+      width: 45%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      font-size: 1.3rem;
+      color: black;
+      z-index: 2;
+    }
+
+    .services-text strong {
+      color: #b50dfdbd;
+      font-size: 1.9rem;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .lottie-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      max-width: 600px;
+      z-index: 2;
+    }
+
+    lottie-player {
+      width: 100%;
+      max-height: 90vh;
+      height: auto;
+      z-index: 2;
+    }
+
+    @media screen and (max-width: 768px) {
+      .scene-container {
+        flex-direction: column;
+        padding-top: 100px;
+      }
+      .services-text, .lottie-wrapper {
+        width: 90%;
+      }
+    }
+    .typed-text {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .service-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .card {
+      width: 1000px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      background: linear-gradient(135deg, #ffe0f0, #ffd3ec);
+      box-shadow: 0 10px 30px rgba(255, 0, 150, 0.3);
+      border-radius: 20px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      height: 400px;
+      position: relative;
+    }
+
+    .card:hover .card-inner {
+      transform: rotateX(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+    }
+
+    .card-front {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      overflow: hidden;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .card-back {
+      transform: rotateX(180deg);
+      background-color: #f9f9f9;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 20px;
+    }
+
+    .card-back p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .flip-hint {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #ff3399;
+      animation: bounce 2s infinite;
+    }
+
+    .flip-hint i {
+      display: block;
+      font-size: 2rem;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+.birds-bg {
+  position: absolute;
+  top: 100vh; /* Starts from the card section */
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.birds-bg lottie-player {
+  width: 100%;
+  height: 100%;
+}
+.services-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.services-wrapper .birds-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.services-wrapper .service-section {
+  position: relative;
+  z-index: 1;
+}
+.vanta-section {
+  position: relative;
+  z-index: 1;
+}
+
+.vanta-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.vanta-section .service-section {
+  position: relative;
+  z-index: 2;
+}
+  .fancy-footer {
+  background: #fff;
+  color: #333;
+  padding: 60px 20px 30px;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.1);
+}
+
+.animated-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url('https://www.transparenttextures.com/patterns/bubbles.png');
+  opacity: 0.03;
+  z-index: 0;
+  animation: scrollBackground 120s linear infinite;
+}
+
+@keyframes scrollBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Align vertically */
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+  text-align: center; /* Center text for consistency */
+}
+
+.footer-col {
+  flex: 1 1 250px;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  color: #b100d1;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-col p,
+.footer-col a {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover {
+  color: #b100d1;
+  text-shadow: 0 0 5px #b100d1;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background: #b100d1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.subscribe-form button:hover {
+  background: #d135f5;
+  box-shadow: 0 0 10px #d135f5;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.social-icons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  padding-left: 35%;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(33%) sepia(89%) saturate(7421%) hue-rotate(281deg) brightness(94%) contrast(101%);
+  opacity: 0.7;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.map-section {
+  margin-top: 40px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(236, 40, 236, 0.575); /* light pink shadow */
+}
+
+.map-frame {
+  width: 100%;
+  height: 400px;
+  border: none;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.map-wrapper:hover .map-frame {
+  transform: scale(1.1);
+}
+
+.map-hover-text {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #000;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.map-wrapper:hover .map-hover-text {
+  display: block;
+}
+
+.map-hover-text a {
+  color: #b100d1;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.map-hover-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+  <div id="mouseBubble" class="mouse-bubble"></div>
+
+<header>
+  <div class="logo"><img src="../static/logo.png" alt="Logo" /></div>
+  <div class="nav-wrapper">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About Us</a>
+      <a href="/services">Services</a>
+      <a href="/portfolio">Portfolio</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+  <button class="quote-btn" onclick="location.href='/contact'">Get a Quote</button>
+  <button class="mobile-menu-btn" id="mobileMenuBtn">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Home</a>
+    <a href="/about">About Us</a>
+    <a href="/services">Services</a>
+    <a href="/portfolio">Portfolio</a>
+    <a href="/contact">Contact</a>
+    <a href="/contact" class="quote-btn" style="display: inline-block; margin-top: 15px; width: auto;">Get a Quote</a>
+  </div>
+</header>
+
+  <!-- Background Particles -->
+  <div id="tsparticles"></div>
+
+  <!-- Banner -->
+  <div class="scene-container">
+    <div class="services-text">
+      <strong>Services We Provide</strong>
+      At Infinite Technology, we specialize in creating powerful, visually striking websites tailored to meet your unique business needs. Whether you're a startup establishing your online presence or an enterprise aiming to elevate your digital experience, our web design solutions are crafted for performance, usability, and growth.
+      We combine modern design aesthetics with cutting-edge technologies to ensure your website not only looks stunning but functions seamlessly across all devices. Our team focuses on user experience (UX), fast load times, mobile responsiveness, and search engine optimization (SEO) to help you convert visitors into loyal customers.
+    </div>
+    <div class="lottie-wrapper">
+      <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_fcfjwiyb.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    </div>
+  </div>
+
+<!-- Services Sections (individual) -->
+<div class="services-wrapper">
+ <div class="birds-bg">
+  <lottie-player 
+    src="https://assets1.lottiefiles.com/packages/lf20_Stt1Rz.json" 
+    background="transparent"  
+    speed="1"  
+    loop  
+    autoplay>
+  </lottie-player>
+</div>
+<div id="birdsBackground" class="vanta-section">
+<section class="service-section">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="https://t3.ftcdn.net/jpg/08/71/60/32/360_F_871603234_fTMmjlUOpt4F9mDudj8wjyzkt0khEtSZ.jpg" alt="Web Development">
+      </div>
+      <div class="card-back">
+        <p><b>Web Development:</b><br>Infinite Technologies, we specialize in crafting powerful, responsive, and user-friendly websites 💻 that help businesses stand out in the digital world 🌐. Whether it’s a sleek landing page, a dynamic eCommerce platform 🛒, or a complex web application ⚙️, our team uses cutting-edge technologies like HTML5, CSS3, JavaScript, React, and Node.js 💡 to build fast, secure, and scalable solutions 🚀. We focus on clean code 🧼, seamless UI/UX design 🖱️, and optimized performance to ensure your site not only looks amazing but also delivers results 📈. From frontend brilliance to backend robustness, we turn your vision into a high-performing digital reality 🛠️.</p>
+      </div>
+    </div>
+    <div class="flip-hint">
+      <i class="fas fa-mouse-pointer"></i>
+      Flip me 
+    </div>
+  </div>
+</section>
+
+<section class="service-section">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg" alt="App Development">
+      </div>
+      <div class="card-back">
+        <p><b>App Development:</b><br>We specialize in 📱 iOS and Android app development, crafting high-performance native apps using Swift, Kotlin, and platform-specific SDKs to deliver the best user experience on every device. Our 🌐 web application development services focus on building robust, secure, and scalable web apps using modern frameworks like React, Node.js, and Django. For 💻 desktop applications, we develop custom software for Windows, macOS, and Linux tailored to your business workflows. We also provide 🏢 enterprise solutions designed to streamline operations, improve collaboration, and drive digital transformation. As part of our process, we conduct thorough 📝 requirement gathering to understand client needs, define the scope, key features, target users, and technical requirements. Our team also handles 🗂️ database design, structuring how data is stored and managed through SQL or NoSQL databases, while ensuring reliable backups, indexing, and optimized queries.</p>
+      </div>
+    </div>
+    <div class="flip-hint">
+      <i class="fas fa-mouse-pointer"></i>
+      Flip me 
+    </div>
+  </div>
+</section>
+
+<section class="service-section">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="https://media.licdn.com/dms/image/sync/v2/D5627AQFNeEtFsU8qxA/articleshare-shrink_800/articleshare-shrink_800/0/1734239269623?e=2147483647&v=beta&t=i_YtVj1lLhXdpzlbVf-xciDhze7uPXoD2QJdAqSnx9c" alt="Graphic Design">
+      </div>
+      <div class="card-back">
+        <p><b>Graphic Design:</b><br>At Infinite Technologies, our graphic design services 🎨 are all about transforming ideas into visually stunning experiences ✨. From eye-catching logos 🧩 and brand identities 🆔 to modern UI/UX designs 🖱️ and marketing creatives 📢, we craft visuals that not only look great but also communicate your brand's story effectively 💬. Using the latest tools like Adobe Creative Suite 🛠️ and Figma 🧮, our designers blend creativity 🧠 with strategy 📐 to ensure every pixel serves a purpose. Whether you need social media graphics 📱, business brochures 📘, or website layouts 💻, we deliver high-impact designs that leave lasting impressions 🌟 and drive engagement 🚀.</p>
+      </div>
+    </div>
+    <div class="flip-hint">
+      <i class="fas fa-mouse-pointer"></i>
+      Flip me 
+    </div>
+  </div>
+</section>
+
+<section class="service-section">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="https://www.digitalfuturetimes.com/wp-content/uploads/2021/02/Social-Media-Marketing-Platform-Guide-Outline-101-Digital-Marketing-Bootstrap-Business-Frugal-Entrepreneur-Mike-Schiemer-Michael.png" alt="Social Media Marketing">
+      </div>
+      <div class="card-back">
+        <p><b>Digital Marketing:</b><br>Our 📈 SEO optimization services include technical audits, on-page enhancements, and ethical link-building strategies to improve organic rankings and attract high-intent traffic. We craft a 📚 content strategy using editorial calendars, pillar pages, and compelling copy that educates, inspires, and converts your audience. Through 📱 social media campaigns, we create thumb-stopping visuals and apply data-driven targeting to build strong brand loyalty across major platforms. Our 📧 email marketing solutions feature automated flows and segmented newsletters that nurture leads and boost lifetime customer value. With 💰 paid advertising, we focus on ROI-driven Google and Meta ads, continuously optimized through A/B testing to make every marketing dollar count. Finally, our 📊 analytics and reporting offer clear dashboards and actionable insights so you can double down on what truly drives results.</p>
+      </div>
+    </div>
+    <div class="flip-hint">
+      <i class="fas fa-mouse-pointer"></i>
+      Flip me 
+    </div>
+  </div>
+</section>
+
+<section class="service-section">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="https://gorevity.com/wp-content/uploads/2022/04/How-To-Setup-an-E-commerce-Store.png" alt="Products">
+      </div>
+      <div class="card-back">
+        <p><b>Product Making:</b><br>At Infinite Technologies, our IT products 🖥️ are designed to solve real-world challenges with innovation 💡, precision 🎯, and performance ⚙️. From custom software solutions 🛠️ to ready-to-deploy digital platforms 🚀, we build scalable and secure products tailored to specific business needs. Whether it's a CRM system 📊, an inventory management platform 📦, a cloud-based dashboard ☁️, or a mobile-first application 📱, our products are developed using the latest technologies and user-centric design principles 🎨. Backed by reliable support 🤝, seamless integration 🔗, and regular updates 🔄, our solutions empower businesses to streamline operations 🧠, enhance productivity 📈, and stay ahead in the digital era 🌐.</p>
+      </div>
+    </div>
+    <div class="flip-hint">
+      <i class="fas fa-mouse-pointer"></i>
+      Flip me 
+    </div>
+  </div>
+</section>
+</div>
+</div>
+
+<footer class="fancy-footer">
+  <div class="animated-bg"></div>
+  <div class="footer-container">
+    <div class="footer-col newsletter">
+      <h3>Infinite Technology</h3>
+      <p>Subscribe to our newsletter to get the latest news, updates, and offers. Building future-ready digital solutions across web, mobile, AI/ML, and immersive technologies.</p>
+    </div>
+
+    <div class="footer-col contact">
+      <h3>Get In Touch</h3>
+      <p>📍 A/F-43, Amrapali Complex,<br> Bopal Cross Road, near Kotak Mahindra Bank,<br> Ahmedabad-380058</p>
+      <p>📧 <a href="mailto:infinitetechnology06@gmail.com">infinitetechnology06@gmail.com</a></p>
+      <p>📞 <a href="tel:+916359480914">+91 63594 80914</a></p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1BcZkTHeeB/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/in/infinite-technologys-51aa6a35b" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/infinite._technologys/profilecard/?igsh=MXJ1cXdlZWtyZGE1aQ==" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+
+    <div class="footer-col links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Our Services</a></li>
+        <li><a href="/portfolio">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="map-section">
+  <div class="map-wrapper">
+    <iframe
+      class="map-frame"
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d592.8527079149901!2d72.4777631!3d23.0288411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc9aeacd773d8d31%3A0x9229a7c405cb5b3e!2sInfinite%20Technology!5e1!3m2!1sen!2sin!4v1749802125810!5m2!1sen!2sin"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <div class="map-hover-text">
+      <a href="https://www.google.com/maps?q=Infinite+Technology" target="_blank">
+        📍 Explore our Location on Google Maps
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Infinite Technologys. All rights reserved.</p>
+  </div>
+</footer>
+  <!-- Scripts -->
+  <script>
+    // Mobile Nav
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileNav.classList.toggle('active');
+      mobileMenuBtn.innerHTML = mobileNav.classList.contains('active')
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    // Particles
+    window.addEventListener("load", () => {
+    // Initialize Particles
+    tsParticles.load("tsparticles", {
+      fullScreen: { enable: false },
+      particles: {
+        number: { value: 50 },
+        size: { value: 6 },
+        move: { enable: true, speed: 1 },
+        opacity: { value: 0.7 },
+        links: {
+          enable: true,
+          distance: 150,
+          color: "#cccccc",
+          opacity: 1.5,
+          width: 2
+        }
+      },
+      interactivity: {
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" }
+        },
+        modes: {
+          repulse: { distance: 100 },
+          push: { quantity: 4 }
+        }
+      },
+      background: { color: "#ffffff" }
+    });
+
+    // Initialize Vanta Birds
+    VANTA.BIRDS({
+  el: "#birdsBackground",
+  backgroundColor: 0xffffff,
+  color1: 0x3300cc,     // Deep purple-blue
+  color2: 0xff0066,     // Reddish pink
+  birdSize: 1.5,
+  wingSpan: 20,
+  speedLimit: 3,
+  separation: 30,
+  alignment: 20,
+  cohesion: 20,
+  quantity: 2,          // 🔽 Reduced number of birds
+  backgroundAlpha: 0.1
+});
+  });
+
+
+</script>
+</body>
+</html>
