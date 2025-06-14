@@ -1,3 +1,4 @@
 Flask>=3.0,<4
 # Only used in production; safe to omit locally
 gunicorn>=21.2
+gunicorn app:app
