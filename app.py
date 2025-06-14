@@ -22,11 +22,11 @@ def portfolio():
 def contact():
     return render_template('contact.html') 
 @app.route('/sitemap.xml')
-def contact():
+def sitemap():
     return render_template('sitemap.xml') 
     
 @app.route('/robots.txt')
-def contact():
+def robots():
     return render_template('robots.txt') 
 if __name__ == '__main__':
     app.run(debug=True)
