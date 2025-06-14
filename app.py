@@ -21,6 +21,12 @@ def portfolio():
 @app.route('/contact')
 def contact():
     return render_template('contact.html') 
-
+@app.route('/sitemap.xml')
+def contact():
+    return render_template('sitemap.xml') 
+    
+@app.route('/robots.txt')
+def contact():
+    return render_template('robots.txt') 
 if __name__ == '__main__':
     app.run(debug=True)
