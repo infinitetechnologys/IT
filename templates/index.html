@@ -51,70 +51,79 @@
 <meta name="twitter:image" content="https://infinitetechnologys.com/assets/og-home.jpg">
 <link rel="canonical" href="https://infinitetechnologys.com/" />
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: white;
-      color: #212529;
-      overflow-x: hidden;
-    }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-    header {
-      width: 100%;
-      background-color:rgb(255, 255, 255);
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      padding: 12px 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      height: 70px;
-    }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  color: #212529;
+  overflow-x: hidden;
+}
 
-    .logo img {
-      height: 45px;
-    }
+header {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  height: 70px;
+}
 
-    .nav-wrapper {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
 
-    nav {
-      display: flex;
-      gap: 24px;
-    }
+.logo img {
+  height: 45px;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #ba06ec;
-      font-weight: 500;
-      font-size: 16px;
-      position: relative;
-    }
+.nav-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
 
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      height: 2px;
-      background: #000000;
-      width: 0;
-      transition: width 0.3s;
-    }
+nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
 
-    nav a:hover::after {
-      width: 100%;
-    }
+nav a {
+  text-decoration: none;
+  color: #ba06ec;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+}
 
-    .quote-btn {
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  background: #000000;
+  width: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.quote-btn {
       background-color: #800080d3;
       color: white;
       padding: 8px 20px;
@@ -126,47 +135,87 @@
       white-space: nowrap;
     }
 
-    .mobile-menu-btn {
-      display: none;
-      background: none;
-      border: none;
-      color: #ba06ec;
-      font-size: 24px;
-      cursor: pointer;
-      margin-left: auto;
-      padding: 8px;
-    }
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ba06ec;
+  font-size: 28px;
+  cursor: pointer;
+  margin-left: 10px;
+  z-index: 1001;
+}
 
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      top: 70px;
-      left: 0;
-      width: 100%;
-      background: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      z-index: 999;
-      flex-direction: column;
-      padding: 20px;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease;
-    }
+.mobile-nav {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  padding: 20px;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
 
-    .mobile-nav.active {
-      transform: translateY(0);
-    }
+.mobile-nav.active {
+  transform: translateY(0);
+  display: flex;
+}
 
-    .mobile-nav a {
-      padding: 12px 0;
-      color: #ba06ec;
-      text-decoration: none;
-      font-weight: 500;
-      border-bottom: 1px solid #eee;
-    }
+.mobile-nav a {
+  padding: 12px 0;
+  color: #ba06ec;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+}
 
-    .mobile-nav a:last-child {
-      border-bottom: none;
-    }
+.mobile-nav a:last-of-type {
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-nav .quote-btn {
+  background-color: #800080d3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .nav-wrapper,
+  .quote-btn.desktop-only {
+    display: none;
+  }
+
+  header {
+    padding: 12px 16px;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+.bubble-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
 
     .bubble-bg {
       position: absolute;
@@ -192,17 +241,6 @@
       100% { transform: translateY(-10vh); opacity: 0; }
     }
 
-    .mouse-bubble {
-      position: fixed;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: rgba(144, 0, 255, 0.25);
-      pointer-events: none;
-      z-index: 10000;
-      transform: translate(-50%, -50%);
-      transition: transform 0.05s, background-color 0.5s;
-    }
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -256,97 +294,148 @@ model-viewer {
 }
 
     #ai-character {
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 100px 5% 120px;
-      gap: 3rem;
-      overflow: hidden;
-      z-index: 1;
-    }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 5% 120px;
+  gap: 3rem;
+  overflow: hidden;
+  z-index: 1;
+  flex-wrap: wrap;
+}
 
-    #ai-character .model-container {
-      position: relative;
-      flex: 1;
-      min-width: 0;
-    }
+#ai-character .model-container {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 100%;
+}
 
-    #ai-character model-viewer {
-      width: 100%;
-      height: 500px;
-      animation: bobble 3s ease-in-out infinite;
-    }
+#ai-character model-viewer {
+  width: 100%;
+  height: 500px;
+  animation: bobble 3s ease-in-out infinite;
+}
 
-    @keyframes bobble {
-      0%, 100% { transform: rotateZ(-1deg) translateY(0px); }
-      50% { transform: rotateZ(1deg) translateY(-6px); }
-    }
+@keyframes bobble {
+  0%, 100% { transform: rotateZ(-1deg) translateY(0px); }
+  50% { transform: rotateZ(1deg) translateY(-6px); }
+}
 
-    #ai-character .speech-bubble {
-      position: absolute;
-      top: -20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.95);
-      padding: 12px 18px;
-      border-radius: 15px;
-      font-size: 15px;
-      color: #333;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-      max-width: 220px;
-      text-align: center;
-      animation: fadeInOut 6s ease-in-out infinite;
-    }
+#ai-character .speech-bubble {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 18px;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #333;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  max-width: 220px;
+  text-align: center;
+  animation: fadeInOut 6s ease-in-out infinite;
+  z-index: 2;
+}
 
-    @keyframes fadeInOut {
-      0%, 100% { opacity: 0; transform: translate(-50%, -10px); }
-      10%, 90% { opacity: 1; transform: translate(-50%, -20px); }
-    }
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translate(-50%, -10px); }
+  10%, 90% { opacity: 1; transform: translate(-50%, -20px); }
+}
 
-    #ai-character .ai-text {
-      flex: 1;
-      position: relative;
-      min-width: 0;
-    }
+#ai-character .ai-text {
+  flex: 1;
+  position: relative;
+  min-width: 300px;
+  max-width: 100%;
+}
 
-    #ai-character .ai-text h2 {
-      font-size: 2rem;
-      color: #b100d1;
-      margin-bottom: 1rem;
-      margin-top: 0;
-    }
+#ai-character .ai-text h2 {
+  font-size: 2rem;
+  color: #b100d1;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
 
-    #ai-character .ai-text p {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      color: #333;
-      margin-bottom: 0;
-    }
+#ai-character .ai-text p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 0;
+}
 
-    #ai-character .bubble-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-      pointer-events: none;
-    }
+#ai-character .bubble-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
 
-    #ai-character .bubble-bg .bubble {
-      background: rgba(0, 204, 255, 0.15);
-    }
+#ai-character .bubble-bg .bubble {
+  background: rgba(0, 204, 255, 0.15);
+}
 
-    footer {
-      background: #f1f3f5;
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.875rem;
-      color: #868e96;
-      border-top: 1px solid #dee2e6;
-    }
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  #ai-character {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 5% 80px;
+    gap: 2.5rem;
+  }
+
+  #ai-character model-viewer {
+    height: 400px;
+  }
+
+  #ai-character .speech-bubble {
+    font-size: 14px;
+    padding: 10px 14px;
+    max-width: 200px;
+  }
+
+  #ai-character .ai-text h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  #ai-character .ai-text p {
+    font-size: 1.05rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  #ai-character {
+    padding: 60px 4% 60px;
+    gap: 2rem;
+  }
+
+  #ai-character model-viewer {
+    height: 300px;
+  }
+
+  #ai-character .speech-bubble {
+    font-size: 13px;
+    padding: 8px 12px;
+    max-width: 180px;
+  }
+
+  #ai-character .ai-text h2 {
+    font-size: 1.5rem;
+  }
+
+  #ai-character .ai-text p {
+    font-size: 1rem;
+  }
+}
+
 
     /* ----------- NEW VISION SECTION ----------- */
     #vision-section {
@@ -924,29 +1013,31 @@ model-viewer {
 <body>
 
 <header>
-  <div class="logo"><img src="../static/logo.png" alt="Logo" /></div>
+  <div class="logo">
+    <img src="../static/logo.png" alt="Logo" />
+  </div>
+
   <div class="nav-wrapper">
     <nav>
       <a href="/">Home</a>
-      <a href="/about">About Us</a>
       <a href="/services">Services</a>
-      <a href="/portfolio">Portfolio</a>
+      <a href="/about">About</a>
       <a href="/contact">Contact</a>
     </nav>
   </div>
+
   <button class="quote-btn" onclick="location.href='/contact'">Get a Quote</button>
-  <button class="mobile-menu-btn" id="mobileMenuBtn">
-    <i class="fas fa-bars"></i>
-  </button>
-  <div class="mobile-nav" id="mobileNav">
-    <a href="/">Home</a>
-    <a href="/about">About Us</a>
-    <a href="/services">Services</a>
-    <a href="/portfolio">Portfolio</a>
-    <a href="/contact">Contact</a>
-    <a href="/contact" class="quote-btn" style="display: inline-block; margin-top: 15px; width: auto;">Get a Quote</a>
-  </div>
+  <button class="mobile-menu-btn">&#9776;</button>
 </header>
+
+<div class="mobile-nav">
+  <a href="/">Home</a>
+  <a href="/services">Services</a>
+  <a href="/about">About</a>
+  <a href="/contact">Contact</a>
+  <a href="/contact" class="quote-btn">Get a Quote</a>
+</div>
+
 
 <div class="bubble-bg" id="bubbleContainer"></div>
 <div class="mouse-bubble" id="mouseBubble"></div>
@@ -1054,14 +1145,14 @@ model-viewer {
           </div>
         </div>
         <div class="model-card">
-          <model-viewer src="../static/Figma_Logo_0611062457_texture.glb" auto-rotate camera-controls disable-zoom></model-viewer>
+          <model-viewer src="../static/Figma_Logo_0611062457_texture.glb" auto-rotate camera-controls disable zoom></model-viewer>
           <div class="model-info">
             <h3>Figma</h3>
             <p>Creating collaborative and responsive design prototypes with Figma, offering real-time design feedback and easy collaboration.</p>
           </div>
         </div>
         <div class="model-card">
-          <model-viewer src="../static/Firebase_Logo_0611063747_texture.glb" auto-rotate camera-controls disable-zoom></model-viewer>
+          <model-viewer src="../static/Firebase_Logo_0611063747_texture.glb" auto-rotate camera-controls disable zoom></model-viewer>
           <div class="model-info">
             <h3>Firebase</h3>
             <p>Integrating Firebase for real-time database solutions, offering seamless synchronization and scalability for mobile and web apps.</p>
@@ -1126,24 +1217,12 @@ model-viewer {
 
 <script>
   // Toggle mobile nav
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileNav = document.getElementById('mobileNav');
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
 
   mobileMenuBtn.addEventListener('click', () => {
     mobileNav.classList.toggle('active');
-    mobileMenuBtn.innerHTML = mobileNav.classList.contains('active')
-      ? '<i class="fas fa-times"></i>'
-      : '<i class="fas fa-bars"></i>';
-  });
-
-  // Close nav on link click
-  const mobileLinks = mobileNav.querySelectorAll('a');
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileNav.classList.remove('active');
-      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    });
-  });
+  })
 
   // Scroll change color for AI section
   const aiSection = document.getElementById("ai-character");
