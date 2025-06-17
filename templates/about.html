@@ -167,7 +167,66 @@
     .mobile-nav a:last-child {
       border-bottom: none;
     }
+@media (max-width: 768px) {
+  .nav-wrapper,
+  .quote-btn:not(.mobile-nav .quote-btn) {
+    display: none;
+  }
 
+  .mobile-menu-btn {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #ba06ec;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 1001;
+  }
+
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    z-index: 999;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobile-nav.active {
+    transform: translateY(0);
+    display: flex;
+  }
+
+  .mobile-nav a {
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 500;
+    color: #ba06ec;
+    border-bottom: 1px solid #eee;
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav .quote-btn {
+    background-color: #800080d3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+}
     .bubble-bg {
       position: absolute;
       top: 0;
@@ -546,6 +605,42 @@ section#about p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000;
+}
+/* Responsive layout */
+@media (max-width: 992px) {
+  .mission-wrapper {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .mission-content {
+    margin-top: 20px;
+    width: 100%;
+    max-width: none;
+    padding: 30px;
+  }
+
+  .mission-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .mission-content p {
+    font-size: 1rem;
+  }
+}
+/* Extra small devices */
+@media (max-width: 576px) {
+  .mission-content {
+    padding: 20px;
+  }
+
+  .mission-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .mission-content p {
+    font-size: 0.95rem;
+  }
 }
 .fancy-footer {
   background: #fff;
@@ -996,4 +1091,3 @@ section#about p {
 
 </script>
 </body>
-
